@@ -3,6 +3,29 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+type Photo = {
+	src: string
+	alt: string
+}
+
+const gallery : Photo[] = [
+	{
+		src: "/tapanti_run.jpg",
+		alt: "Podium of a race with me in first place"
+	},
+	{
+		src: "/me.jpg",
+		alt: "Portrait picture of me"
+		},
+	{
+		src: "/me_boxing.jpg",
+		alt: "Me putting on boxing gloves"
+	}
+]
+
+const random_index = Math.floor(Math.random() * gallery.length)
+const selected_picture : Photo  = gallery.at(random_index) ?? gallery[0]
 ---
 
 <!doctype html>
@@ -13,10 +36,31 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>You made it!</h1>
-			<p>
-			Welcome to my little corner of the internet. I hope you enjoy your time in here while browsing, if you do, please let me know in any of my social media.
-			</p>
+
+	<h1> Welcome! </h1>
+	<p>
+My name is Jeremy Zelaya, I'm 26 years olds and I live in Costa Rica. I have been studying software engineering since 2019. I currently work as a full stack engineer at <a href="https://www.valuelabs.com/">Value Labs</a>.
+	</p>
+	<img width={1020} height={510} src={selected_picture.src} alt="" />
+	<h2> Hobbies </h2>
+	 When I'm not codding, you may find me ejoying my free time with...
+	 <ul>
+		 <li> Amateur booxing. </li>
+		 <li> Lifting weights. </li>
+		 <li> Running. </li>
+		 <li> Dancing. </li>
+		 <li> Reading. </li>
+		 <li> Drawing. </li>
+		 <li> Tinkering with my development environment. </li>
+		 <li> Self-hosting. </li>
+	 </ul>
+
+	<h2> Languages </h2>
+	 <ul>
+		 <li> Spanish. </li>
+		 <li> English. </li>
+		 <li> (Want to learn) Portuguese. </li>
+	 </ul>
 		</main>
 		<Footer />
 	</body>
