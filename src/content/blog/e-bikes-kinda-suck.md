@@ -2,7 +2,7 @@
 title: 'E-bikes kinda suck... in the long term'
 description: 'Low battery health? Time to throw it away'
 pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/my_ebike.jpg'
 ---
 
 Back in 2019, my father bought me an e-bike. Back then, this was a very new trend. I have used this bike to commute back and forth around my town, and I must say that it has saved me a ton of money on Ubers. Still, I must admit that many years later, I am left with a nearly unusable bike. Yes, batteries are supposed to degrade over time, but buying a new battery costs nearly as much as buying a brand new bike. 
